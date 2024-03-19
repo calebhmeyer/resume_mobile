@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caleb Hoernschemeyer's Resume</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: skyblue;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+        .header, .section, .work-experience, .social-links {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+        .header h1, .section h2, .work-experience h2, .social-links h2, .dropdown-header {
+            margin: 0;
+            font-size: 17px;
+        }
+        .header p, .section p, .work-experience p, .social-links p, .social-links a, .dropdown-content {
+            margin: 10px 0 0;
+            font-size: 12px;
+        }
+        .titles {
+            display: flex; /* Horizontal layout by default */
+            justify-content: center; /* Center align the items */
+            font-size: 17px;
+            margin-top: 20px;
+        }
+        .columns {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            max-width: 1200px;
+            margin-top: 20px;
+            gap: 20px;
+        }
+        .column {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            width: calc(33.333% - 20px);
+            text-align: left;
+            font-size: 12px;
+            box-sizing: border-box;
+        }
+        .column h2 {
+            font-size: 16px;
+            margin-top: 0;
+        }
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Mobile styles */
+        @media (max-width: 767px) {
+            .titles {
+                flex-direction: column; /* Stack titles vertically */
+                align-items: center; /* Center align the stacked titles */
+            }
+            .columns, .column {
+                display: none; /* Hide columns on smaller screens */
+            }
+            .dropdown-container {
+                display: block; /* Show dropdown containers on smaller screens */
+                width: 80%;
+                max-width: 600px;
+                margin-bottom: 10px;
+            }
+            .dropdown-header {
+                background-color: white;
+                padding: 15px;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+                border: none;
+                text-align: left;
+                width: 100%;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            }
+            .dropdown-content {
+                display: none;
+                background-color: white;
+                padding: 15px;
+                font-size: 14px;
+                border-radius: 5px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Caleb Hoernschemeyer</h1>
+    <p>480 - 435 - 2074 &nbsp;&nbsp;&nbsp; calebhmeyer@gmail.com</p>
+</div>
+
+<div class="titles">
+    <div>Lighting designer</div>
+    <div>Video engineer</div>
+    <div>Virtual production tech</div>
+</div>
+
+
+<div class="section">
+    <h2>Summary:</h2>
+    <p>I am a lighting designer and video operator who strives for technical perfection and aesthetic quality throughout my shows. The process of bringing a concept through the pre-production and planning phases fuels me, ensuring that a smooth and safe load in meets both client and technician expectations. I program and design to be as visually captivating and seamless as possible, invoking joy and emotion from the time they park, to the time the house lights get called back on.</p>
+</div>
+
+<div class="work-experience">
+    <h2>Work Experience:</h2>
+    <p>2012 – Rhino staging and event solutions<br>
+       2014 – Precise Corporate Staging<br>
+       2015 – Freelance Lighting Designer<br>
+       2018 – Began Youtube<br>
+       2020 – Freelance VFX Artist<br>
+       2021 – Flow Productions – Virtual Production Studio</p>
+</div>
+
+<!-- Lighting Column and Dropdown Content -->
+<div class="column" id="lighting-column">
+    <h2>Lighting</h2>
+    <p>My Primary field since 2014, I am comfortable busking or cued styles, and I enjoy lighting for music and festivals, dance, and corporate shows. I believe every show deserves to look impactful.</p>
+    <p>I have worked on film projects in the past as lead lighting for green screen and grip assists.</p>
+    <p>I own my own GrandMA2 on PC Fader Wing, 2k node and 1k node.</p>
+    <ul>
+        <li>-GrandMA2: Proficient in any scenario. Pixel mapping capable. Can busk or do cue to cue.</li>
+        <li>-GrandMA3: Familiar.</li>
+        <li>-Hog4: Comfortable.</li>
+        <li>-Chamsys: Familiar. Used in several shows but it’s not my favorite.</li>
+        <li>-Minuit Une Hybrid Laser Fixtures: Familiar. Completed and certified by them.</li>
+        <li>-Weak point is timecode.</li>
+    </ul>
+</div>
+
+<div class="dropdown-container">
+    <button class="dropdown-header" onclick="toggleDropdown('lighting-dropdown')">Lighting</button>
+    <div class="dropdown-content" id="lighting-dropdown">
+            <p>My Primary field since 2014, I am comfortable busking or cued styles, and I enjoy lighting for music and festivals, dance, and corporate shows. I believe every show deserves to look impactful.</p>
+    <p>I have worked on film projects in the past as lead lighting for green screen and grip assists.</p>
+    <p>I own my own GrandMA2 on PC Fader Wing, 2k node and 1k node.</p>
+    <ul>
+        <li>-GrandMA2: Proficient in any scenario. Pixel mapping capable. Can busk or do cue to cue.</li>
+        <li>-GrandMA3: Familiar.</li>
+        <li>-Hog4: Comfortable.</li>
+        <li>-Chamsys: Familiar. Used in several shows but it’s not my favorite.</li>
+        <li>-Minuit Une Hybrid Laser Fixtures: Familiar. Completed and certified by them.</li>
+        <li>-Weak point is timecode.</li>
+    </ul>
+</div>
+
+    </div>
+</div>
+
+<!-- Video Column and Dropdown Content -->
+<div class="column" id="video-column">
+    <h2>Video</h2>
+    <p>Doing this since 2018, I enjoy being able to make their primary content look as visually appealing on stage and on streams as possible, consulting with other departments when called for.</p>
+    <ul>
+        <li>-DMX Integration: Comfortable with integrating and operating in Resolume, Arkaos, Touch Designer, or other video playback systems.</li>
+        <li>-Video walls: Comfortable with NovaStar and Linsn programming, familiar with RCFG files.</li>
+        <li>-ATEM Switchers: Comfortable with setup and operation with other video elements.</li>
+        <li>-PowerPoint: Proficient</li>
+        <li>-Unreal Engine: Comfortable with for 3D Content generation.</li>
+        <li>-DaVinci Resolve: Comfortable for video editing.</li>
+        <li>-Weak points are cameras, color grading.</li>
+    </ul>
+</div>
+
+<div class="dropdown-container">
+    <button class="dropdown-header" onclick="toggleDropdown('video-dropdown')">Video</button>
+    <div class="dropdown-content" id="video-dropdown">
+            <p>Doing this since 2018, I enjoy being able to make their primary content look as visually appealing on stage and on streams as possible, consulting with other departments when called for.</p>
+    <ul>
+        <li>-DMX Integration: Comfortable with integrating and operating in Resolume, Arkaos, Touch Designer, or other video playback systems.</li>
+        <li>-Video walls: Comfortable with NovaStar and Linsn programming, familiar with RCFG files.</li>
+        <li>-ATEM Switchers: Comfortable with setup and operation with other video elements.</li>
+        <li>-PowerPoint: Proficient</li>
+        <li>-Unreal Engine: Comfortable with for 3D Content generation.</li>
+        <li>-DaVinci Resolve: Comfortable for video editing.</li>
+        <li>-Weak points are cameras, color grading.</li>
+    </ul>
+</div>
+    </div>
+</div>
+
+<!-- Virtual / Interactive Column and Dropdown Content -->
+<div class="column" id="virtual-column">
+    <h2>Virtual / Interactive</h2>
+    <p>A pipe dream turned into a profession, I greatly enjoy building virtual 3D environments for games, projections, interactive displays, and other use cases.</p>
+    <ul>
+        <li>-Touch Designer: Familiar when used for interactive or augmented reality experiences.</li>
+        <li>-Unreal Engine: Comfortable in all aspects. Strong point is environment design, modeling in blender, materials, blueprints, DMX/OSC/Midi Integrations.</li>
+        <li>-Virtual Production: Comfortable with In-Camera VFX Workflow with Unreal Engine, Motive tracking, and Switchboard for management.</li>
+        <li>-Blender: Comfortable.</li>
+        <li>-Virtual Reality Development: Familiar. I've made VR tools for VP, and developed AR apps.</li>
+        <li>-Weak point is inverse kinematics, behavior trees, GLSL.</li>
+    </ul>
+</div>
+
+<div class="dropdown-container">
+    <button class="dropdown-header" onclick="toggleDropdown('virtual-dropdown')">Virtual / Interactive</button>
+    <div class="dropdown-content" id="virtual-dropdown">
+            <p>A pipe dream turned into a profession, I greatly enjoy building virtual 3D environments for games, projections, interactive displays, and other use cases.</p>
+    <ul>
+        <li>-Touch Designer: Familiar when used for interactive or augmented reality experiences.</li>
+        <li>-Unreal Engine: Comfortable in all aspects. Strong point is environment design, modeling in blender, materials, blueprints, DMX/OSC/Midi Integrations.</li>
+        <li>-Virtual Production: Comfortable with In-Camera VFX Workflow with Unreal Engine, Motive tracking, and Switchboard for management.</li>
+        <li>-Blender: Comfortable.</li>
+        <li>-Virtual Reality Development: Familiar. I've made VR tools for VP, and developed AR apps.</li>
+        <li>-Weak point is inverse kinematics, behavior trees, GLSL.</li>
+    </ul>
+</div>
+    </div>
+</div>
+<div class="download-section" style="margin-top: 20px;">
+    <a href="https://github.com/calebhmeyer/resume/raw/main/CalebHoernschemeyer_Resume_2024.pdf" download="Caleb_Hoernschemeyer_Resume.pdf">
+        <button style="padding: 10px 20px; font-size: 16px; cursor: pointer;">Download Resume as PDF</button>
+    </a>
+</div>
+
+<div class="social-links">
+    <h2>Social Links:</h2>
+    <p><a href="https://www.youtube.com/calebhoernschemeyer" target="_blank">YouTube</a></p>
+</div>
+
+<script>
+    function toggleDropdown(contentId) {
+        var content = document.getElementById(contentId);
+        if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
